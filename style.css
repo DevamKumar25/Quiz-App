@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Added padding for small screens */
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Ensures a maximum width */
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slight scaling on hover */
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    text-align: center; /* Centered text */
+}
+
+button {
+    width: 100%; /* Full-width buttons */
+    padding: 10px;
+    background-color: #6200ea;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px; /* Increased font size for better readability */
+    transition: background-color 0.3s, transform 0.2s; /* Added transform transition */
+}
+
+button:hover {
+    background-color: #3700b3;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0; /* Remove left padding */
+}
+
+li {
+    padding: 10px; /* Padding for list items */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between items */
+    background-color: #333333; /* Background for choices */
+}
+
+li:hover {
+    background-color: #6200ea; /* Highlight on hover */
+}
+
+.hidden {
+    display: none; 
+}
+
+#score {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #c1b7d8; 
+    font-size: 24px; 
+    font-weight: bold; 
+}
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 40px); /* Responsive width adjustment */
+        padding: 15px; /* Adjust padding for smaller screens */
+        box-shadow: none; /* Remove shadow on very small screens for simplicity */
+        border-radius: 5px; /* Less rounded corners on small screens */
+    }
+
+    button {
+        font-size: 14px; /* Smaller font size on smaller screens */
+        padding: 8px; /* Less padding on buttons for smaller screens */
+    }
+}
